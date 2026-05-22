@@ -11,8 +11,7 @@ namespace Dsw2026Ej11.Collections;
 public class CasoList
 {
     private List<Alumno> _alumnos;
-    public List<Alumno> Alumnos { get => this._alumnos;
-                                  set => this._alumnos = value; }
+    public List<Alumno> Alumnos { get => this._alumnos; }
     public CasoList()
     {
         _alumnos = new List<Alumno>();
