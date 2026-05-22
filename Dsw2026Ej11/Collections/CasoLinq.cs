@@ -34,7 +34,7 @@ public class CasoLinq
     }
     public decimal GetPromedioPrecios()
     {
-        return _libros.Select(l => l.Precio).DefaultIfEmpty(0).Average();
+        return Math.Round(_libros.Select(l => l.Precio).DefaultIfEmpty(0).Average(),2);
     }
     public List<Libro> GetListById()
     {
@@ -59,6 +59,6 @@ public class CasoLinq
     }
     public List<Libro> GetOrdenDescendiente()
     {
-        return _libros.OrderByDescending(l => l.Id).ToList();
+        return _libros.OrderByDescending(l => l.Titulo).ToList();
     }
 }
